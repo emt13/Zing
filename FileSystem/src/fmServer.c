@@ -34,6 +34,7 @@ void start(struct inputs* params){
 
     printf(" -- Starting server at %s:%d\n", (*params).ipaddr, (*params).port);
     
+       
 }
 
 int main(int argc, char** args){
