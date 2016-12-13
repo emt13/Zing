@@ -8,7 +8,7 @@
 #define STORAGE_DIR "/zingStore"
 
 // create storage directory if it doesn't exist
-void setup(){
+char* setup(){
     struct stat store;
     char* path = (char*)malloc(256 * sizeof(char));
     path[0] = '\0';
@@ -20,17 +20,25 @@ void setup(){
         std::cout << " Creating Storage " << std::endl;
         mkdir("zingStore", 0777);
     }
-    
+    return path;   
 }
 
-void reindex(FileSystem& fs){
+void reindex(FileSystem& fs, char* path){
+    fs.crawl(path, strlen(path));
+}
 
+// actually start the storage
+void start(FileSystem& fs){
+    // BASIC TESTING LOOP
+    while(1){
+       break; 
+    }
 }
 
 int main(int args, char** argc){
 
-    setup();    
+    char* path = setup();    
     FileSystem fs = FileSystem();
-    reindex(fs);
-    
+    reindex(fs, path);
+    start(fs);   
 }
