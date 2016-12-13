@@ -17,7 +17,8 @@ void setup(){
     if(stat(path, &store) == 0 && S_ISDIR(store.st_mode)){
         std::cout << " Storage already exists at path: " << path << std::endl;
     }else{
-        std::cout << " Does not exist " << std::endl;
+        std::cout << " Creating Storage " << std::endl;
+        mkdir("zingStore", 0777);
     }
     
 }
