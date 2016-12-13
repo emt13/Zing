@@ -23,8 +23,14 @@ void setup(){
     
 }
 
+void reindex(FileSystem& fs){
+
+}
+
 int main(int args, char** argc){
 
     setup();    
+    FileSystem fs = FileSystem();
+    reindex(fs);
     
 }

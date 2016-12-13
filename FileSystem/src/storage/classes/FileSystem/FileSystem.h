@@ -1,7 +1,7 @@
 #include <unordered_map>
 
 class FileSystem { 
-
-    FileSystem(){}
+    public:
+        FileSystem();
 
 };
